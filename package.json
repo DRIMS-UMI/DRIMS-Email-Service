@@ -1,0 +1,21 @@
+{
+  "name": "umi-email-service",
+  "version": "1.0.0",
+  "description": "Function to send Mails",
+  "scripts": {
+    "dev": "netlify dev",
+    "build": "echo 'No build step needed'",
+    "functions:dev": "netlify functions:serve",
+    "deploy": "netlify deploy --prod"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "nodemailer": "^7.0.9"
+  },
+  "devDependencies": {
+    "netlify-cli": "^23.9.1"
+  }
+}
