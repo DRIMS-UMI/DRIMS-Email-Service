@@ -64,7 +64,7 @@ exports.handler = async (event, context) => {
             };
         }
 
-        const { to, subject, text, html, from } = emailData;
+        const { to, subject, text, html, from, attachments } = emailData;
 
         // Validate required fields
         if (!to) {
@@ -134,7 +134,8 @@ exports.handler = async (event, context) => {
             to: Array.isArray(to) ? to : [to],
             subject: subject,
             ...(text && { text: text }),
-            ...(html && { html: html })
+            ...(html && { html: html }),
+            ...(attachments && Array.isArray(attachments) && { attachments: attachments })
         };
 
         // Send email
